@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+    {% set mensagens = get_flashed_messages()%}
+    <form action="/viagem/editasave" method="post">
+        <fieldset class="edita">
+            <input type="hidden" name="id_pacotes", value="{{dados.id_pacotes}}">
+            <div>
+                <label for="destino">Destino: </label>
+                <input type="text" name="destino" id="destino", value="{{dados.destino}}">
+            </div>
+            <div>
+                <label for="data_saida">Data De Saida: </label>
+                <input type="date" name="data_saida" id="data_saida", value="{{dados.data_saida}}">
+            </div>
+            <div>
+                <label for="preco">Preço: </label>
+                <input type="number" name="preco" id="preco", value="{{dados.preco}}">
+            </div>
+            <div>
+                <button type="submit">Salvar</button>
+            </div>
+        </fieldset>
+    </form>
+    {% if mensagens%}
+        {% for msg in mensagens%}
+            <div class="message">
+                {{msg}}
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endblock %}

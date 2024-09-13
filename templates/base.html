@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho Lucca</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/estilo.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/responsivo.css')}}">
+</head>
+<body>
+    <header>
+        <p>Trabalho Lucca</p>
+    </header>
+    <nav>
+        <a href="/">Principal</a>
+        <a href="/viagem">Pacotes</a>
+    </nav>
+    <main>
+        {% block conteudo %}
+        {% endblock %}
+    </main>
+
+</body>
+</html>

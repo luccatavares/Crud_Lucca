@@ -1,0 +1,177 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Comic Neue';
+}
+
+:root {
+    --primary: rgb(0, 225, 255);
+    --secondary: rgb(120, 190, 179);;
+    --black: #000;
+    --white: #FFF;
+}
+
+a, input{
+    display: block;
+
+}
+
+img{
+    width: 20rem;
+}
+
+/*header*/
+
+header{
+    display: flex;
+    background-color: var(--primary);
+    justify-content: space-between;
+    height: 6rem;
+}
+
+header p{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: xx-large;
+}
+
+nav{
+    width: 100%;
+    background-color: var(--secondary);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: xx-large;
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+/*main*/
+
+main{
+    background-color: var(--white);
+    min-height: calc(100vh - 10.3rem);
+}
+
+main h1{
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main a{
+    font-size: 2rem;
+}
+
+main div img{
+    width: 40rem;
+}
+
+main div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*filme*/
+
+.message{
+    color: rgb(135, 154, 236);
+    font-size: large;
+    font-weight: bold;
+    padding-top: 5rem;
+    font-size: 3rem;
+}
+
+.add a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--black);
+    padding-top: 10rem;
+}
+
+.tab_filme, tr, td, th{
+    border: 1px solid var(--primary);
+    border-collapse: collapse;
+    padding-left: 1rem;
+    padding-right: 3rem;
+    font-size: 1rem;
+}
+
+table {
+    padding-top: 8rem;
+    margin: auto;
+}
+
+/*Formulario*/
+
+form{
+    padding-top: 5rem;
+}
+
+.adicionar{
+    width: fit-content;
+    height: fit-content;
+    flex-direction: column;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+}
+
+.adicionar div{
+    padding: 0.5rem;
+    display: flex;
+    justify-content: right;
+    align-items: end;
+    font-size: 2rem;
+}
+
+.adicionar div input{
+    height: 2rem;
+}
+
+.adicionar div button{
+    font-size: 2rem;
+}
+
+.edita{
+    width: fit-content;
+    height: fit-content;
+    flex-direction: column;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+}
+
+.edita div{
+    padding: 0.5rem;
+    display: flex;
+    justify-content: right;
+    align-items: end;
+    font-size: 2rem;
+}
+
+.edita div input{
+    height: 2rem;
+}
+
+.edita div button{
+    font-size: 2rem;
+}
+

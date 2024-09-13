@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+    <table class="tabela_viagem">
+        <tr>
+            <th>Destino</th>
+            <th>Data De Saida</th>
+            <th>Preço</th>
+            <th>Edita</th>
+            <th>Remove</th>
+        </tr>
+        {% for viagem in dados %}
+        <tr>
+            <td>{{viagem.destino}}</td>
+            <td>{{viagem.data_saida}}</td>
+            <td>{{viagem.preco}}</td>
+            <td><a href="/eventos/edita/{{viagem.id_pacotes}}">Editar</a></td>
+            <td><a href="/eventos/remove/{{viagem.id_pacotes}}">Remover</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <div class="add">
+        <a href="/viagem/add", class="Adicionar">+ Adicionar</a>
+    </div>
+    {% set mensagens = get_flashed_messages()%}
+    {% if mensagens%}
+        {% for msg in mensagens%}
+        <div class="message">
+            {{msg}}
+        </div>
+        {% endfor %}
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+    {% set mensagens = get_flashed_messages()%}
+    {%if mensagens %}
+        {% for msg in mensagens %}
+                {{msg}}
+        {% endfor %}
+    {% endif %}
+
+    <form action="/viagem/save" method="post">
+        <fieldset>
+            <label for="destino">Destino: </label>
+            <input type="text" name="destino" id="destino">
+            <label for="data_saida">Data De Saida </label>
+            <input type="date" name="data_saida" id="data_saida">
+            <label for="preco">Preço: </label>
+            <input type="number" name="preco" id="preco">
+            <button type="submit">Salvar</button>
+        </fieldset>
+    </form>
+
+{% endblock %}
